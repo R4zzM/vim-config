@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/media/backup'
+let g:netrw_dirhist_2='/home/erasmat/repos/github/linux-config/.vim/bundle/nerdtree'
+let g:netrw_dirhist_3='/home/erasmat/.thunderbird/user.default'
