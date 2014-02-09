@@ -141,10 +141,6 @@ vnoremap < <gv
 
 " inoremap {{{
 
-" Fundamental ESC remappings!
-inoremap jk <esc>
-" inoremap fd <esc>
-
 " Swedish Programmer experiment
 inoremap aa å
 inoremap AA Å
