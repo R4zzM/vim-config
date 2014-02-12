@@ -288,46 +288,6 @@ nnoremap <Leader>api :help function-list<CR>
 
 " }}}
 
-" Abberivations {{{
-
-" Vim
-inoreabbrev iab inoreabbrev
-inoreabbrev nno nnoremap
-inoreabbrev ino inoremap
-inoreabbrev ono onoremap
-inoreabbrev vno vnoremap
-inoreabbrev nor noremap
-
-" Words
-iabbrev doesnt doesn't
-iabbrev dont don't
-iabbrev wasnt wasn't
-iabbrev taht that
-iabbrev Strign String
-iabbrev Isntance Instance
-iabbrev isntance instance
-iabbrev getIsntance getInstance
-
-" }}}
-
-" Plugin: Pathogen {{{
-
-" Load the plugins
-execute pathogen#infect()
-
-" Load the documentation for the plugins
-execute pathogen#helptags()
-
-"}}}
-
-" Plugin: Syntastic {{{ 
-
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_enable_signs = 1
-let g:syntastic_quiet_messages = {'level' : 'warnings'}
-
-" }}}
-
 " Plugin: CtrlP {{{
 
 let g:ctrlp_show_hidden  = 1
