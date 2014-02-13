@@ -12,7 +12,7 @@ Bundle 'tpope/vim-dispatch.git'
 Bundle 'tpope/vim-fugitive.git'
 
 Bundle 'scrooloose/syntastic'
-Bundle 'scrooloose/nerdtree'
+" Bundle 'scrooloose/nerdtree'
 
 Bundle 'vim-scripts/vimwiki.git'
 Bundle 'vim-scripts/taglist.vim'
