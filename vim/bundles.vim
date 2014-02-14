@@ -10,9 +10,10 @@ filetype plugin indent on
 Bundle 'tpope/vim-commentary.git'
 Bundle 'tpope/vim-dispatch.git'
 Bundle 'tpope/vim-fugitive.git'
+Bundle 'tpope/vim-unimpaired.git'
 
 Bundle 'scrooloose/syntastic'
-Bundle 'scrooloose/nerdtree'
+" Bundle 'scrooloose/nerdtree'
 
 Bundle 'vim-scripts/vimwiki.git'
 Bundle 'vim-scripts/taglist.vim'
