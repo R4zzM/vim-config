@@ -1,5 +1,3 @@
-let maplocalleader="\\"
-
 augroup filetype_vim
   autocmd!
   autocmd FileType vim setlocal foldmethod=marker
@@ -106,40 +104,11 @@ set nobackup
 
 " }}}
 
-" vnoremap {{{
-
-" Go to beginning and end of current line
-vnoremap H ^
-vnoremap L $
-
-" Insert quotes and empa.. 
-vnoremap <Leader>em c**<esc>P
-vnoremap <Leader>qo c""<esc>P
-
-" I don't get the point of this command...
-" vunmap s
-
-" Surround visually selected text
-vnoremap s( c()<esc>P
-vnoremap s) c()<esc>P
-vnoremap s[ c[]<esc>P
-vnoremap s] c[]<esc>P
-vnoremap s{ c{}<esc>P
-vnoremap s} c{}<esc>P
-vnoremap s' c''<esc>P
-vnoremap s* c**<esc>P
-vnoremap s" c""<esc>P
-
-" Align
-vnoremap <Leader>at :Align\|<CR>
+" inoremap, vnoremap, nnoremap, onoremap {{{
 
 " Indentation without loosing selection
 vnoremap > >gv 
 vnoremap < <gv 
-
-" }}}
-
-" inoremap {{{
 
 " Swedish Programmer experiment
 inoremap aa å
@@ -153,90 +122,42 @@ inoremap OE Ö
 inoremap Oe Ö
 
 " Double quotationmarks => Put cursor inbetween (v = qvote ;)
+" This is a really useful shortkey, but it shadows vim functionality. 
+" Maybe there is another key that can be used instead?
 inoremap <c-v> ""<esc>i
-inoremap '' ''<esc>i
 
 " Insert block (and automatically closes current line, see above)
 inoremap <c-b> <esc>g_a<space>{}<left><CR><CR><backspace><up><c-t>
 
-" Simple movement in insertmode by holdning control
+" Movement in insertmode by holdning control
 inoremap <c-h> <c-o>h
 inoremap <c-j> <c-g>j
 inoremap <c-k> <c-g>k
 inoremap <c-l> <c-o>l
 
-" Doubletapping *any* parenthesis button generates pair and puts cursor inside
-inoremap (( ()<esc>i
-inoremap )) ()<esc>i
-inoremap {{ {}<esc>i
-inoremap }} {}<esc>i
-inoremap [[ []<esc>i
-inoremap ]] []<esc>i
-
-" For Vimwiki purposes to override the above.
-" Maybe {{ should be removed in .vim files now that I think about it...
-
-inoremap {{{ {{{<right>
-inoremap }}} }}}<right>
-
-" }}}
-
-" nnoremap {{{
-
-" Format paragraph to be shorter than tw
-nnoremap <leader>f gqap
+" Navigation between views in normal mode
+nnoremap <c-h> <c-w>h
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-l> <c-w>l
 
 " Make scrolling be more smooth. 20 Lines at a time "
 nnoremap <c-u> <C-Y><up><C-Y><up><C-Y><up><C-Y><up><C-Y><up><C-Y><up><C-Y><up><C-Y><up><C-Y><up><C-Y><up><C-Y><up><C-Y><up><C-Y><up><C-Y><up><C-Y><up><C-Y><up><C-Y><up><C-Y><up><C-Y><up><C-Y><up>
 
 nnoremap <c-d> <C-E><down><C-E><down><C-E><down><C-E><down><C-E><down><C-E><down><C-E><down><C-E><down><C-E><down><C-E><down><C-E><down><C-E><down><C-E><down><C-E><down><C-E><down><C-E><down><C-E><down><C-E><down><C-E><down><C-E><down>
 
-" Go to end of line and beginning of line 
-nnoremap L $
-nnoremap H ^
-
-" Simplify navigation between views
-nnoremap <c-h> <c-w>h
-nnoremap <c-j> <c-w>j
-nnoremap <c-k> <c-w>k
-nnoremap <c-l> <c-w>l
-
-" Use for easymotion
-nnoremap <c-f> <NOP>
-
-" }}}
-
-" onoremap {{{
-
 " Inside parenthesis 
 onoremap p i(
-
-" Inside the next parenthesis on the same line
-onoremap np :call NextParenthesis()<CR>
-
-" Inside current quotes 
-onoremap qo i"
-
-" Inside next quotes on the same line
-onoremap nqo :call NextQuote()<CR>
-
-" End / Beginning of line
-onoremap H ^
-onoremap L $
 
 " }}}
 
 " Leader commands {{{
   
 " Use space as <Leader>
-" unmap <space>
 let mapleader="\<space>"
 
 " [s]av[e] command
 nnoremap <Leader>se :w<CR>
-
-" [qu]it with force command 
-nnoremap <Leader>qu :q!<CR>
 
 " [t]ab[c]close and [b]uffer[d]elete
 nnoremap <Leader>tc :tabclose!<CR>
@@ -264,11 +185,6 @@ nnoremap <Leader>ccu :!ct unco %<CR>
 nnoremap <Leader>ccls :!ct lsco -me -recurse -short<CR>
 nnoremap <Leader>cclsa :!ct lsco -me -all -short<CR>
 nnoremap <Leader>ccia :!ct lsco -me -recurse -short \| xargs ct ci -nc<CR>
-
-" Git stuff (Depends on fugitive plugin)
-nnoremap <Leader>gc :Gcommit<CR>
-nnoremap <Leader>gs :Gstatus<CR> 
-nnoremap <Leader>gd :Gdiff<CR> 
 
 " Manage sessions (Depends on SessionMan plugin)
 nnoremap <Leader>sl :SessionList<CR>
@@ -334,13 +250,6 @@ let g:vimwiki_table_mappings = 0
 
 " }}}
 
-" Plugin: Easymotion {{{
-
-" Use c-f for easymotion
-let g:EasyMotion_leader_key = '<C-f>'
-
-" }}}
-
 " Theme {{{
 
 " Set the theme. I think I got this one from vivify.
@@ -350,43 +259,10 @@ colorscheme Dim2
 
 " Support Functions {{{
 
-" Go to the next word but don't change line
-" function! NextWordNoLineChange()
-"   let line_before_jump = line(".")
-"   execute "normal! E"
-"   let line_after_jump = line(".")
-"   if(line_before_jump !=# line_after_jump)
-"     execute "normal! \<up>$"
-"   endif
-" endfunction
-
-" Go to the previous word but don't change line
-" function! PrevWordNoLineChange()
-"   let line_before_jump = line(".")
-"   execute "normal! B"
-"   let line_after_jump = line(".")
-"   if(line_before_jump !=# line_after_jump)
-"     execute "normal! W"
-"   endif
-" endfunction
-
 " Open the ftplugin file for the current ft
 function! OpenFtPluginFile(ft)
   let path  = $HOME . "/.vim/ftplugin/" . a:ft . "/" . a:ft . ".vim"
   execute "normal! :vsplit " . path . "\<CR>"
 endfunction
 
-" Movement to the next parenthesis. 
-" 'dummy' is first inserted so that something can be selected incase it is
-" empty. It is always removed. Time will tell if this breaks something.
-function! NextParenthesis()
-  execute "normal! f(adummy\<esc>"
-  execute "normal! F(\<right>vt)"
-endfunction
-
-" Same as with NextParenthesis() above but for doublequotes
-function! NextQuote()
-  execute "normal! f\"adummy\<esc>"
-  execute "normal! F\"\<right>vt\""
-endfunction
 " }}}
