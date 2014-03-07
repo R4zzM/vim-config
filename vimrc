@@ -137,6 +137,12 @@ vnoremap <Leader>at :Align\|<CR>
 vnoremap > >gv 
 vnoremap < <gv 
 
+" Unimpaired
+" unmap <C-Up>
+" unmap <C-Down>
+" nmap <C-Up> [egv 
+" nmap <C-Down> ]egv 
+
 " }}}
 
 " inoremap {{{
@@ -166,8 +172,8 @@ inoremap <c-k> <c-g>k
 inoremap <c-l> <c-o>l
 
 " Doubletapping *any* parenthesis button generates pair and puts cursor inside
-inoremap (( ()<esc>i
-inoremap )) ()<esc>i
+" inoremap (( ()<esc>i
+" inoremap )) ()<esc>i
 inoremap {{ {}<esc>i
 inoremap }} {}<esc>i
 inoremap [[ []<esc>i
@@ -182,9 +188,6 @@ inoremap }}} }}}<right>
 " }}}
 
 " nnoremap {{{
-
-" Format paragraph to be shorter than tw
-nnoremap <leader>f gqap
 
 " Make scrolling be more smooth. 20 Lines at a time "
 nnoremap <c-u> <C-Y><up><C-Y><up><C-Y><up><C-Y><up><C-Y><up><C-Y><up><C-Y><up><C-Y><up><C-Y><up><C-Y><up><C-Y><up><C-Y><up><C-Y><up><C-Y><up><C-Y><up><C-Y><up><C-Y><up><C-Y><up><C-Y><up><C-Y><up>
@@ -235,13 +238,6 @@ let mapleader="\<space>"
 " [s]av[e] command
 nnoremap <Leader>se :w<CR>
 
-" [qu]it with force command 
-nnoremap <Leader>qu :q!<CR>
-
-" [t]ab[c]close and [b]uffer[d]elete
-nnoremap <Leader>tc :tabclose!<CR>
-nnoremap <Leader>bd :bd!<CR>
-
 " Edit .vimrc
 nnoremap <Leader>ev :vsplit $MYVIMRC<CR>
 
@@ -276,9 +272,6 @@ nnoremap <Leader>ss :SessionSave<CR>
 
 " Show Taglist (depends on exuberant ctags and taglist plugin)
 nnoremap <Leader>tl :TlistToggle<CR>
-
-" Show NERDTree (depends on NERDTree plugin)
-nnoremap <Leader>nt :NERDTreeToggle<CR>
 
 " Ack work under cursor. Depends on Ack.
 nnoremap <Leader>ack :Ack <cword><CR>
