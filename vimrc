@@ -134,6 +134,8 @@ inoremap <c-h> <c-o>h
 inoremap <c-j> <c-g>j
 inoremap <c-k> <c-g>k
 inoremap <c-l> <c-o>l
+
+" Change viewport by holding ctrl in normalmode
 nnoremap <c-h> <c-w>h
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
@@ -143,9 +145,6 @@ nnoremap <c-l> <c-w>l
 nnoremap <c-u> <C-Y><up><C-Y><up><C-Y><up><C-Y><up><C-Y><up><C-Y><up><C-Y><up><C-Y><up><C-Y><up><C-Y><up><C-Y><up><C-Y><up><C-Y><up><C-Y><up><C-Y><up><C-Y><up><C-Y><up><C-Y><up><C-Y><up><C-Y><up>
 
 nnoremap <c-d> <C-E><down><C-E><down><C-E><down><C-E><down><C-E><down><C-E><down><C-E><down><C-E><down><C-E><down><C-E><down><C-E><down><C-E><down><C-E><down><C-E><down><C-E><down><C-E><down><C-E><down><C-E><down><C-E><down><C-E><down>
-
-" Inside parenthesis 
-onoremap p i(
 
 " }}}
 
