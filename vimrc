@@ -106,6 +106,10 @@ set nobackup
 
 " inoremap, vnoremap, nnoremap, onoremap {{{
 
+" Speed up movement in vim wiki journal in the spirit of unimpaired
+nnoremap [j :VimwikiDiaryPrevDay<CR>
+nnoremap ]j :VimwikiDiaryNextDay<CR>
+
 " Indentation without loosing selection
 vnoremap > >gv 
 vnoremap < <gv 
@@ -154,7 +158,7 @@ nnoremap <c-d> <C-E><down><C-E><down><C-E><down><C-E><down><C-E><down><C-E><down
 let mapleader="\<space>"
 
 " [s]av[e] command
-nnoremap <Leader>se :w<CR>
+nnoremap <Leader>se :w!<CR>
 
 " Edit .vimrc
 nnoremap <Leader>ev :vsplit $MYVIMRC<CR>
