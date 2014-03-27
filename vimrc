@@ -121,9 +121,9 @@ inoremap Aa Å
 inoremap ae ä
 inoremap AE Ä
 inoremap Ae Ä
-inoremap oe ö
-inoremap OE Ö
-inoremap Oe Ö
+inoremap oi ö
+inoremap OI Ö
+inoremap Oi Ö
 
 " Double quotationmarks => Put cursor inbetween (v = qvote ;)
 " This is a really useful shortkey, but it shadows vim functionality. 
