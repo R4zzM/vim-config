@@ -80,8 +80,6 @@ set statusline+=\ -\
 set statusline+=%y
 set statusline+=\ -\ 
 set statusline+=%l/%L
-set statusline+=\ -\ 
-set statusline+=%{fugitive#statusline()}
 
 " Add autocompletion menu in command mode
 set wildmode=full
@@ -163,14 +161,8 @@ nnoremap <Leader>se :w!<CR>
 " Edit .vimrc
 nnoremap <Leader>ev :vsplit $MYVIMRC<CR>
 
-" Edit .vim/after/ftplugin/[filetype].vim for the type of buffer 
-nnoremap <Leader>eft :call OpenFtPluginFile(&ft)<CR>
-
 " Source the current file in the current buffer
 nnoremap <Leader>sv :source %<CR>
-
-" Init search with CtrlP plugin
-nnoremap <Leader>p :CtrlPMixed<CR>
 
 " Start a full build (Depends on Dispatch plugin)
 nnoremap <Leader>mk :Make<CR>
