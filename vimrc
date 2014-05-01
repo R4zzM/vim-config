@@ -112,25 +112,6 @@ nnoremap ]j :VimwikiDiaryNextDay<CR>
 vnoremap > >gv 
 vnoremap < <gv 
 
-" Swedish Programmer experiment
-inoremap aa å
-inoremap AA Å
-inoremap Aa Å
-inoremap ae ä
-inoremap AE Ä
-inoremap Ae Ä
-inoremap oi ö
-inoremap OI Ö
-inoremap Oi Ö
-
-" Double quotationmarks => Put cursor inbetween (v = qvote ;)
-" This is a really useful shortkey, but it shadows vim functionality. 
-" Maybe there is another key that can be used instead?
-inoremap <c-v> ""<esc>i
-
-" Insert block (and automatically closes current line, see above)
-inoremap <c-b> <esc>g_a<space>{}<left><CR><CR><backspace><up><c-t>
-
 " Movement in insertmode by holdning control
 inoremap <c-h> <c-o>h
 inoremap <c-j> <c-g>j
