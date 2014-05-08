@@ -20,5 +20,6 @@ Bundle 'vim-scripts/sessionman.vim'
 
 Bundle 'kien/ctrlp.vim.git'
 Bundle 'Valloric/YouCompleteMe'
-" Bundle 'Lokaltog/vim-easymotion'
 Bundle 'mileszs/ack.vim'
+
+Bundle 'digitaltoad/vim-jade'
