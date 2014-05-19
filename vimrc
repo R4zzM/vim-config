@@ -137,7 +137,7 @@ nnoremap <c-d> <C-E><down><C-E><down><C-E><down><C-E><down><C-E><down><C-E><down
 let mapleader="\<space>"
 
 " [s]av[e] command
-nnoremap <Leader>se :w!<CR>
+nnoremap <Leader>s :w!<CR>
 
 " Edit .vimrc
 nnoremap <Leader>ev :vsplit $MYVIMRC<CR>
