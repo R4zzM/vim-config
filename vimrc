@@ -100,9 +100,12 @@ set sessionoptions-=options
 set noswapfile
 set nobackup
 
+
 " }}}
 
 " inoremap, vnoremap, nnoremap, onoremap {{{
+" Save with backspace
+nnoremap <BS> :w!<CR>
 
 " Speed up movement in vim wiki journal in the spirit of unimpaired
 nnoremap [j :VimwikiDiaryPrevDay<CR>
@@ -135,9 +138,6 @@ nnoremap <c-d> <C-E><down><C-E><down><C-E><down><C-E><down><C-E><down><C-E><down
   
 " Use space as <Leader>
 let mapleader="\<space>"
-
-" [s]av[e] command
-nnoremap <Leader>s :w!<CR>
 
 " Edit .vimrc
 nnoremap <Leader>ev :vsplit $MYVIMRC<CR>
