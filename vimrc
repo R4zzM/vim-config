@@ -105,7 +105,7 @@ set nobackup
 
 " inoremap, vnoremap, nnoremap, onoremap {{{
 " Save with backspace
-nnoremap <BS> :w!<CR>
+nnoremap <CR> :w!<CR>
 
 " Speed up movement in vim wiki journal in the spirit of unimpaired
 nnoremap [j :VimwikiDiaryPrevDay<CR>
