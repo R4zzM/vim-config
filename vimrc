@@ -15,6 +15,11 @@ augroup filetype_wiki
   autocmd BufWritePost *.wiki :silent Vimwiki2HTML
 augroup END
 
+augroup filetype_qml
+  autocmd!
+  autocmd BufRead,BufNewFile *.qml setfiletype qml
+augroup END
+
 " Editor configuration {{{
 
 " Init bundle
@@ -50,8 +55,8 @@ set shiftwidth=2
 set softtabstop=2
 
 " Max 79 chars per line. Vizualize.
-set textwidth=79
-set colorcolumn=80
+" set textwidth=79
+" set colorcolumn=80
 
 " Left, right and backspace keys wraps the cursor
 set whichwrap+=<,>,h,l 
@@ -171,6 +176,18 @@ nnoremap <Leader>api :help function-list<CR>
 
 " }}}
 
+" Plugin: YCM {{{ 
+
+  let g:ycm_autoclose_preview_window_after_insertion = 1
+  let g:ycm_confirm_extra_conf = 0
+  let g:ycm_error_symbol = 'E>'
+  let g:ycm_warning_symbol = 'W>'
+  let g:ycm_min_num_identifier_candidate_chars = 4
+  let g:ycm_seed_identifiers_with_syntax = 1
+  let g:ycm_global_ycm_extra_conf = '~/'
+
+" }}}
+
 " Plugin: CtrlP {{{
 
 let g:ctrlp_show_hidden  = 1
@@ -215,6 +232,23 @@ let g:vimwiki_list       = [wiki]
 " To make snipmate work in vimwiki files...
 let g:vimwiki_table_mappings = 0
 
+" }}}
+
+" Plugin Slimv {{{
+" let g:slimv_swank_cmd = '! urxvt -e sbcl --load /usr/share/common-lisp/source/slime/start-swank.lisp &'
+let g:lisp_rainbow=1
+" }}}
+
+" Plugin Ultisnips {{{
+" Trigger configuration. 
+let g:UltiSnipsExpandTrigger="<F1>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+
+let g:UltiSnipsSnippetDirectories=["UltiSnips"]
 " }}}
 
 " Theme {{{

@@ -1,5 +1,5 @@
 let g:netrw_dirhistmax  =10
 let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/media/backup'
-let g:netrw_dirhist_2='/home/erasmat/repos/github/linux-config/.vim/bundle/nerdtree'
-let g:netrw_dirhist_3='/home/erasmat/.thunderbird/user.default'
+let g:netrw_dirhist_1='/home/rasmus/mnt/rasmus/tmp/kamera_bkup_vid_flytt'
+let g:netrw_dirhist_2='/home/rasmus/mnt/rasmus/tmp/kamera_bkup_vid_flytt/DCIM'
+let g:netrw_dirhist_3='/home/rasmus/mnt/rasmus/tmp/kamera_bkup_vid_flytt/DCIM/100NCD60'

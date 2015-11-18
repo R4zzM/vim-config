@@ -7,6 +7,8 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 filetype plugin indent on
 
+Bundle 'kovisoft/slimv'
+Bundle 'vim-scripts/paredit.vim'
 Bundle 'tpope/vim-commentary.git'
 Bundle 'tpope/vim-dispatch.git'
 Bundle 'tpope/vim-fugitive.git'
@@ -20,5 +22,8 @@ Bundle 'vim-scripts/sessionman.vim'
 
 Bundle 'kien/ctrlp.vim.git'
 Bundle 'Valloric/YouCompleteMe'
-" Bundle 'Lokaltog/vim-easymotion'
 Bundle 'mileszs/ack.vim'
+Bundle 'peterhoeg/vim-qml'
+Bundle 'sotte/presenting.vim'
+Bundle 'SirVer/ultisnips'
+Bundle 'honza/vim-snippets'
