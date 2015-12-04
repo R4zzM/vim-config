@@ -19,9 +19,11 @@ Bundle 'scrooloose/syntastic'
 Bundle 'vim-scripts/vimwiki.git'
 Bundle 'vim-scripts/taglist.vim'
 Bundle 'vim-scripts/sessionman.vim'
-
+Bundle 'vim-scripts/a.vim'
+     
 Bundle 'kien/ctrlp.vim.git'
 Bundle 'Valloric/YouCompleteMe'
+Bundle 'rdnetto/YCM-generator'
 Bundle 'mileszs/ack.vim'
 Bundle 'peterhoeg/vim-qml'
 Bundle 'sotte/presenting.vim'
