@@ -28,6 +28,9 @@ source ~/.vim/bundles.vim
 " If this file is read this options is already set. More of a statement...
 set nocompatible
 
+" Remove annoying messages about buffer not saved
+set hidden
+
 " Use highlightnig of text depending on filetype.
 syntax on
 
@@ -145,7 +148,7 @@ nnoremap <c-d> <C-E><down><C-E><down><C-E><down><C-E><down><C-E><down><C-E><down
 let mapleader="\<space>"
 
 " Edit .vimrc
-nnoremap <Leader>ev :vsplit $MYVIMRC<CR>
+nnoremap <Leader>ev :e $MYVIMRC<CR>
 
 " Source the current file in the current buffer
 nnoremap <Leader>sv :source %<CR>
@@ -174,17 +177,26 @@ nnoremap <Leader>ack :Ack <cword><CR>
 " Fast access to VIM builtin functions
 nnoremap <Leader>api :help function-list<CR>
 
+" YouCompleteMe stuff
+nnoremap <Leader>gt :YcmCompleter GoTo<CR>
+nnoremap <Leader>ty :YcmCompleter GetType<CR>
+
+
+" Fast mapping to alternate using a.vim
+nnoremap <Leader>al :A<CR>
+
 " }}}
 
 " Plugin: YCM {{{ 
 
-  let g:ycm_autoclose_preview_window_after_insertion = 1
+  let g:ycm_autoclose_preview_window_after_insertion = 0
   let g:ycm_confirm_extra_conf = 0
   let g:ycm_error_symbol = 'E>'
   let g:ycm_warning_symbol = 'W>'
   let g:ycm_min_num_identifier_candidate_chars = 4
   let g:ycm_seed_identifiers_with_syntax = 1
-  let g:ycm_global_ycm_extra_conf = '~/'
+  let g:ycm_global_ycm_extra_conf = '/home/rasmus/.ycm_extra_conf.py'
+  let g:ycm_goto_buffer_command = 'same-buffer'
 
 " }}}
 
