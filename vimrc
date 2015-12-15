@@ -71,7 +71,8 @@ set backspace=2
 set mouse=a
 
 " Share clipboard with X if available
-set clipboard=unnamedplus
+" set clipboard=unnamedplus
+set clipboard=unnamed
 
 " Show command in status line
 set showcmd
@@ -204,7 +205,7 @@ nnoremap <Leader>al :A<CR>
 
 let g:ctrlp_show_hidden  = 1
 let g:ctrlp_match_window = 'max:25'
-
+let g:ctrlp_follow_symlinks = 1 "Avoid looped symlinks
 " }}}
 
 " Plugin: Taglist {{{
