@@ -1,32 +1,34 @@
 set nocompatible
 filetype off
 
-" Vundle setup
 set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-Bundle 'gmarik/vundle'
-filetype plugin indent on
+call vundle#begin()
 
-Bundle 'kovisoft/slimv'
-Bundle 'vim-scripts/paredit.vim'
-Bundle 'tpope/vim-commentary.git'
-Bundle 'tpope/vim-dispatch.git'
-Bundle 'tpope/vim-fugitive.git'
-Bundle 'tpope/vim-unimpaired.git'
-Bundle 'tpope/vim-surround.git'
+Plugin 'gmarik/vundle'
 
-Bundle 'scrooloose/syntastic'
-Bundle 'vim-scripts/vimwiki.git'
-Bundle 'vim-scripts/taglist.vim'
-Bundle 'vim-scripts/sessionman.vim'
-Bundle 'vim-scripts/a.vim'
+Plugin 'kovisoft/slimv'
+Plugin 'vim-scripts/paredit.vim'
+Plugin 'tpope/vim-commentary.git'
+Plugin 'tpope/vim-dispatch.git'
+Plugin 'tpope/vim-fugitive.git'
+Plugin 'tpope/vim-unimpaired.git'
+Plugin 'tpope/vim-surround.git'
+
+Plugin 'scrooloose/syntastic'
+Plugin 'vim-scripts/vimwiki.git'
+Plugin 'vim-scripts/taglist.vim'
+Plugin 'vim-scripts/sessionman.vim'
+Plugin 'vim-scripts/a.vim'
+Plugin 'vim-scripts/Conque-GDB'
      
-Bundle 'kien/ctrlp.vim.git'
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'rdnetto/YCM-generator'
-Bundle 'mileszs/ack.vim'
-Bundle 'peterhoeg/vim-qml'
-Bundle 'sotte/presenting.vim'
-Bundle 'SirVer/ultisnips'
-Bundle 'honza/vim-snippets'
-Bundle 'rhysd/vim-clang-format'
+Plugin 'kien/ctrlp.vim.git'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'rdnetto/YCM-generator'
+Plugin 'mileszs/ack.vim'
+Plugin 'sotte/presenting.vim'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+Plugin 'rhysd/vim-clang-format'
+
+call vundle#end()
+filetype plugin indent on

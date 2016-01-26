@@ -182,10 +182,6 @@ nnoremap <Leader>api :help function-list<CR>
 nnoremap <Leader>gt :YcmCompleter GoTo<CR>
 nnoremap <Leader>ty :YcmCompleter GetType<CR>
 
-
-" Fast mapping to alternate using a.vim
-nnoremap <Leader>al :A<CR>
-
 " }}}
 
 " Plugin: YCM {{{ 
