@@ -20,6 +20,11 @@ augroup filetype_qml
   autocmd BufRead,BufNewFile *.qml setfiletype qml
 augroup END
 
+augroup filetype_typescript
+  autocmd!
+  autocmd BufRead,BufNewFile *.ts setfiletype typescript
+augroup END
+
 " Editor configuration {{{
 
 " Init bundle
@@ -112,9 +117,7 @@ set nobackup
 
 " }}}
 
-" inoremap, vnoremap, nnoremap, onoremap {{{
-" Save with backspace
-nnoremap <CR> :w!<CR>
+" inoremapj vnoremap, nnoremap, onoremap {{{
 
 " Speed up movement in vim wiki journal in the spirit of unimpaired
 nnoremap [j :VimwikiDiaryPrevDay<CR>
