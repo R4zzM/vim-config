@@ -266,7 +266,7 @@ let g:UltiSnipsSnippetDirectories=["UltiSnips"]
 " Theme {{{
 
 " Set the theme. I think I got this one from vivify.
-colorscheme Dim2
+colorscheme solarized
 
 " }}}
 
