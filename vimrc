@@ -114,7 +114,11 @@ set sessionoptions-=options
 set noswapfile
 set nobackup
 
+" }}}
 
+" Commands {{{ 
+" Push to gerrit in a vim-fugitive way
+command Ggerrit execute "!git push origin HEAD:refs/for/master"
 " }}}
 
 " inoremapj vnoremap, nnoremap, onoremap {{{

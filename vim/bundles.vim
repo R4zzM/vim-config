@@ -31,6 +31,7 @@ Plugin 'sotte/presenting.vim'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'rhysd/vim-clang-format'
+Plugin 'vhdirk/vim-cmake'
 
 call vundle#end()
 filetype plugin indent on
