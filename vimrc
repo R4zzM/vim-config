@@ -15,6 +15,11 @@ augroup filetype_wiki
   autocmd BufWritePost *.wiki :silent Vimwiki2HTML
 augroup END
 
+augroup filetype_clanguages
+    autocmd!
+    autocmd BufWritePre *.c,*.h,*.cpp :ClangFormat
+augroup END
+
 augroup filetype_qml
   autocmd!
   autocmd BufRead,BufNewFile *.qml setfiletype qml
@@ -94,6 +99,8 @@ set statusline+=\ -\
 set statusline+=%y
 set statusline+=\ -\ 
 set statusline+=%l/%L
+set statusline+=\ -\ 
+set statusline+=%{fugitive#statusline()}
 
 " Add autocompletion menu in command mode
 set wildmode=full
@@ -126,6 +133,9 @@ command Ggerrit execute "!git push origin HEAD:refs/for/master"
 " Speed up movement in vim wiki journal in the spirit of unimpaired
 nnoremap [j :VimwikiDiaryPrevDay<CR>
 nnoremap ]j :VimwikiDiaryNextDay<CR>
+
+" Open ctrlp in buffer find mode
+nnoremap <c-b> :CtrlPBuffer<CR>
 
 " Indentation without loosing selection
 vnoremap > >gv 
@@ -188,6 +198,10 @@ nnoremap <Leader>api :help function-list<CR>
 " YouCompleteMe stuff
 nnoremap <Leader>gt :YcmCompleter GoTo<CR>
 nnoremap <Leader>ty :YcmCompleter GetType<CR>
+
+" When merging with fugitive
+nnoremap <Leader>2 :diffget //2<CR>:diffupdate<CR> 
+nnoremap <Leader>3 :diffget //3<CR>:diffupdate<CR> 
 
 " }}}
 
