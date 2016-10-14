@@ -15,10 +15,10 @@ augroup filetype_wiki
   autocmd BufWritePost *.wiki :silent Vimwiki2HTML
 augroup END
 
-augroup filetype_clanguages
-    autocmd!
-    autocmd BufWritePre *.c,*.h,*.cpp :ClangFormat
-augroup END
+" augroup filetype_clanguages
+"     autocmd!
+"     autocmd BufWritePre *.c,*.h,*.cpp :ClangFormat
+" augroup END
 
 augroup filetype_qml
   autocmd!
@@ -81,8 +81,8 @@ set backspace=2
 set mouse=a
 
 " Share clipboard with X if available
-" set clipboard=unnamedplus
-set clipboard=unnamed
+set clipboard=unnamedplus
+""set clipboard=unnamed
 
 " Show command in status line
 set showcmd
@@ -115,6 +115,9 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 " Don't keep options over sessions as it often conflicts with newer versions of 
 " .vimrc
 set sessionoptions-=options
+
+" Expand path where to search for include files in a few extra places.
+set path+=$SDKTARGETSYSROOT/usr/include
 
 " Don't create .swp or backup files. They just cause trouble when the same file
 " is being edited from different computers.
@@ -173,6 +176,12 @@ nnoremap <Leader>sv :source %<CR>
 
 " Start a full build (Depends on Dispatch plugin)
 nnoremap <Leader>mk :Make<CR>
+
+" Start Ex
+nnoremap <Leader>ex :Ex<CR>
+
+" Start NERDTree
+nnoremap <Leader>tr :NERDTreeToggle<CR>
 
 " Clearcase stuff for systems that has that installed...
 nnoremap <Leader>cco :setlocal autoread<CR>:!ct co -nc %<CR>
